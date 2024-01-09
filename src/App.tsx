@@ -5,7 +5,7 @@ import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import Navbar from "./components/Navbar/Navbar";
 import AddProduct from "./pages/AddProduct/AddProduct";
 import Login from "./pages/Login/Login";
-
+import 'semantic-ui-css/semantic.min.css'
 function App(): ReactElement {
 	return (
 		<>

@@ -5,4 +5,5 @@ export interface GetAllProductsModel {
 	skip: number;
 	limit: number;
 	products: ProductModel[];
+	quantity:number;
 }

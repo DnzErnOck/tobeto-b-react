@@ -2,14 +2,15 @@ import {useContext} from "react";
 import {Link} from "react-router-dom";
 import {AuthContext} from "../../contexts/AuthContext";
 import {useSelector} from "react-redux";
+import CartSummary from "../CartSummary/CartSummary";
 
 type Props = {};
 
 const Navbar = (props: Props) => {
 	const authContext: any = useContext(AuthContext);
 
-	const cartState = useSelector((state: any) => state.cart);
-	console.log(cartState);
+	const {cart} = useSelector((state: any) => state);
+	console.log(cart);
 
 	return (
 		<nav
@@ -50,6 +51,11 @@ const Navbar = (props: Props) => {
 								</Link>
 							</li>
 						)}
+						<li className="nav-item">
+							<div className="nav-link">
+								<CartSummary/>
+							</div>
+						</li>
 					</ul>
 					<form className="d-flex" role="search">
 						<input
